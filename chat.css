@@ -1,0 +1,319 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f8ff; /* Fondo azul claro */
+}
+
+/* Barra de navegación */
+.main-header {
+  background-color: #14bfff; 
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* Dorado Sunset */
+}
+
+/* Banner principal */
+.banner {
+  background: url('static/img/banner.jpg') no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 12px 25px;
+  background-color: #ca8cfd;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color:#ca8cfd;
+  color: #fff;
+}
+/* Estilos del chatbot */
+.chat-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  z-index: 1000;
+}
+
+.collapsible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ca8cfd; /* Dorado Sunset */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.collapsible .logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.content {
+  display: none;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  overflow: hidden;
+}
+
+.full-chat-block {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
+/* Contenedor de mensajes */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-height: 300px; /* Altura máxima para el scroll */
+}
+
+/* Estilo de los controles del chat (entrada y botón) */
+.chat-controls {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 15px 15px;
+}
+
+/* Estilos del campo de entrada */
+#chat-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efecto de foco en el campo de entrada */
+#chat-input:focus {
+  border-color: #ca8cfd;
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.5);
+}
+
+/* Estilo del botón de enviar */
+#send-button {
+  background-color: #ca8cfd;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+#send-button:hover {
+  background-color: #d97706;
+}
+
+/* Estilo de las burbujas de chat */
+.bot-text, .user-text {
+  display: flex;
+  margin-bottom: 10px; /* Separación entre mensajes */
+}
+
+.user-text {
+  justify-content: flex-end; /* Mensajes del usuario a la derecha */
+}
+
+.bot-text {
+  justify-content: flex-start; /* Mensajes del bot a la izquierda */
+}
+
+/* Estilo de las burbujas de los mensajes */
+.bot-text span, .user-text span {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 20px; /* Burbujas redondeadas */
+  font-size: 14px;
+  max-width: 80%;
+  word-wrap: break-word; /* Para ajustar texto largo */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo para los mensajes del bot */
+.bot-text span {
+  background-color: #ca8cfd; /* Color de fondo dorado */
+  color: white;
+  align-self: flex-start;
+}
+
+/* Estilo para los mensajes del usuario */
+.user-text span {
+  background-color: #2c3e50; /* Color de fondo azul oscuro */
+  color: white;
+  align-self: flex-end;
+}
+
+/* Scroll personalizado */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #ca8cfd; /* Color del scrollbar */
+  border-radius: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+/* Nube de 'escribiendo...' */
+.typing-indicator {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.typing-indicator:before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  animation: typing 0.5s infinite alternate;
+}
+
+.typing-indicator:after {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  animation: typing 0.5s infinite alternate;
+  animation-delay: 0.2s;
+}
+
+/* Animación para los puntos de la nube */
+@keyframes typing {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

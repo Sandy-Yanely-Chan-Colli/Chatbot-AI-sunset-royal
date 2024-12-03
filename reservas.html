@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - Sunset Royal</title>
+  <link rel="stylesheet" href="chat.css">
+  <link rel="icon" href="static/img/sunset-logo.png" type="image/png">
+
+</head>
+<body>
+  <!-- Navegación -->
+  <header class="main-header">
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="static/img/sunset-logo.png" alt="Logo Sunset Royal">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="reservas.html" class="active">Reservas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Reservas</h1>
+      <p>Haz tu reserva con nosotros ahora mismo.</p>
+      <a href="#" class="btn-primary">Reservar Ahora</a>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <div class="chat-bar">
+    <button id="chat-toggle" class="collapsible">
+      <img src="static/img/sunset-logo.png" alt="Logo Sunset Royal" class="logo">
+      <span>💬 Chat</span>
+    </button>
+    <div class="content">
+      <div class="full-chat-block">
+        <div class="chat-messages" id="chat-messages">
+          <div class="bot-text">
+            <span>¡Hola! Bienvenido a Sunset Royal. ¿En qué puedo ayudarte hoy?</span>
+          </div>
+        </div>
+        <div class="chat-controls">
+          <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí...">
+          <button id="send-button">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+
+ 
+  <footer>
+    <p>&copy; 2024 Sunset Royal Beach Resort. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

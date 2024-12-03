@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Royal Beach Resort</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chat.css">
+  <link rel="icon" href="static/img/sunset-logo.png" type="image/png">
+</head>
+<body>
+  
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="static/img/sunset-logo.png" alt="Logo Sunset Royal" class="navbar-logo">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="about.html">Nosotros</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Bienvenido a Sunset Royal Beach Resort</h1>
+      <p>El mejor destino para disfrutar de Cancún con lujo y comodidad.</p>
+      <a href="#reservas" class="btn-primary">Reserva Ahora</a>
+    </div>
+  </section>
+
+  
+  <section class="info">
+    <div class="container">
+      <h2>Un Paraíso en Cancún</h2>
+      <p>Sunset Royal Beach Resort ofrece experiencias únicas con vistas espectaculares al mar, gastronomía de primer nivel y actividades inolvidables.</p>
+    </div>
+  </section>
+
+  
+  <section class="services">
+    <div class="container">
+      <h2>Servicios Destacados</h2>
+      <div class="services-grid">
+        <div class="service">
+          <h3>Spa</h3>
+          <p>Relájate en nuestro exclusivo spa frente al mar.</p>
+          <img src="static/img/spa.jpg" alt="Spa">
+        </div>
+        <div class="service">
+          <h3>Piscinas</h3>
+          <p>Disfruta de nuestras albercas con vistas espectaculares.</p>
+          <img src="static/img/pool.jpg" alt="Piscina">
+        </div>
+        <div class="service">
+          <h3>Gastronomía</h3>
+          <p>Degusta la mejor cocina internacional y local.</p>
+          <img src="static/img/restaurant.jpg" alt="Restaurante">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="reservas" class="reservations">
+    <div class="container">
+      <h2>Reserva tu estadía</h2>
+      <p>Contacta con nosotros o utiliza nuestro sistema en línea para asegurar tu lugar en el paraíso.</p>
+      <a href="contact.html" class="btn-primary">Contáctanos</a>
+    </div>
+  </section>
+
+  
+  <div class="chat-bar">
+    <button id="chat-toggle" class="collapsible">
+      <img src="static/img/sunset-logo.png" alt="Logo Sunset Royal" class="logo">
+      <span>💬 Chat</span>
+    </button>
+    <div class="content">
+      <div class="full-chat-block">
+        <div class="chat-messages" id="chat-messages">
+          <div class="bot-text">
+            <span>¡Hola! Bienvenido a Sunset Royal. ¿En qué puedo ayudarte hoy?</span>
+          </div>
+        </div>
+        <div class="chat-controls">
+          <input type="text" id="chat-input" placeholder="Escribe tu mensaje aquí...">
+          <button id="send-button">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="chat.js"></script>
+</body>
+</html>
